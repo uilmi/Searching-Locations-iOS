@@ -13,6 +13,9 @@
 		75A9F36728ED5ED300995B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A9F36528ED5ED300995B56 /* Main.storyboard */; };
 		75A9F36928ED5ED600995B56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75A9F36828ED5ED600995B56 /* Assets.xcassets */; };
 		75A9F36C28ED5ED600995B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75A9F36A28ED5ED600995B56 /* LaunchScreen.storyboard */; };
+		75A9F37428ED607B00995B56 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A9F37328ED607B00995B56 /* LocationManager.swift */; };
+		75A9F37628ED60DF00995B56 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A9F37528ED60DF00995B56 /* SearchViewController.swift */; };
+		BBD88C1310F4BFBE003C29FB /* Pods_Searching_Locations_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5689B13029462D884F23DF /* Pods_Searching_Locations_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		75A9F36828ED5ED600995B56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75A9F36B28ED5ED600995B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75A9F36D28ED5ED600995B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75A9F37328ED607B00995B56 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		75A9F37528ED60DF00995B56 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9BFD07506A732D0466A38424 /* Pods-Searching-Locations-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searching-Locations-iOS.release.xcconfig"; path = "Target Support Files/Pods-Searching-Locations-iOS/Pods-Searching-Locations-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9D5689B13029462D884F23DF /* Pods_Searching_Locations_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Searching_Locations_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4F27A9A709F40F559277DB8 /* Pods-Searching-Locations-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Searching-Locations-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Searching-Locations-iOS/Pods-Searching-Locations-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD88C1310F4BFBE003C29FB /* Pods_Searching_Locations_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FE98F47FB987A1DFA0DD6AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4F27A9A709F40F559277DB8 /* Pods-Searching-Locations-iOS.debug.xcconfig */,
+				9BFD07506A732D0466A38424 /* Pods-Searching-Locations-iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		75A9F35328ED5ED300995B56 = {
 			isa = PBXGroup;
 			children = (
 				75A9F35E28ED5ED300995B56 /* Searching-Locations-iOS */,
 				75A9F35D28ED5ED300995B56 /* Products */,
+				2FE98F47FB987A1DFA0DD6AC /* Pods */,
+				F9E5A30EA2A73D64F3DDA3B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +78,8 @@
 			children = (
 				75A9F35F28ED5ED300995B56 /* AppDelegate.swift */,
 				75A9F36128ED5ED300995B56 /* SceneDelegate.swift */,
+				75A9F37328ED607B00995B56 /* LocationManager.swift */,
+				75A9F37528ED60DF00995B56 /* SearchViewController.swift */,
 				75A9F36328ED5ED300995B56 /* ViewController.swift */,
 				75A9F36528ED5ED300995B56 /* Main.storyboard */,
 				75A9F36828ED5ED600995B56 /* Assets.xcassets */,
@@ -67,6 +89,14 @@
 			path = "Searching-Locations-iOS";
 			sourceTree = "<group>";
 		};
+		F9E5A30EA2A73D64F3DDA3B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D5689B13029462D884F23DF /* Pods_Searching_Locations_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75A9F37028ED5ED600995B56 /* Build configuration list for PBXNativeTarget "Searching-Locations-iOS" */;
 			buildPhases = (
+				027D5751ADC8C46D8FAE224C /* [CP] Check Pods Manifest.lock */,
 				75A9F35828ED5ED300995B56 /* Sources */,
 				75A9F35928ED5ED300995B56 /* Frameworks */,
 				75A9F35A28ED5ED300995B56 /* Resources */,
+				F6D6A48B10068C3BA2EC399F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,11 +165,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		027D5751ADC8C46D8FAE224C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Searching-Locations-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6D6A48B10068C3BA2EC399F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Searching-Locations-iOS/Pods-Searching-Locations-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Searching-Locations-iOS/Pods-Searching-Locations-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Searching-Locations-iOS/Pods-Searching-Locations-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75A9F35828ED5ED300995B56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75A9F37628ED60DF00995B56 /* SearchViewController.swift in Sources */,
+				75A9F37428ED607B00995B56 /* LocationManager.swift in Sources */,
 				75A9F36428ED5ED300995B56 /* ViewController.swift in Sources */,
 				75A9F36028ED5ED300995B56 /* AppDelegate.swift in Sources */,
 				75A9F36228ED5ED300995B56 /* SceneDelegate.swift in Sources */,
@@ -282,6 +358,7 @@
 		};
 		75A9F37128ED5ED600995B56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4F27A9A709F40F559277DB8 /* Pods-Searching-Locations-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +387,7 @@
 		};
 		75A9F37228ED5ED600995B56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BFD07506A732D0466A38424 /* Pods-Searching-Locations-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
